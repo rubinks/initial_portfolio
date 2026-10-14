@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Briefcase, ChevronRight, CheckCircle } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { experiences } from '../data/portfolioData';
 
 export default function Experience() {

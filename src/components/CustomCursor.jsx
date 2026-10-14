@@ -3,7 +3,10 @@ import React, { useEffect, useState, useRef } from 'react';
 export default function CustomCursor() {
   const [cursorText, setCursorText] = useState('');
   const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return !window.matchMedia('(pointer: coarse)').matches;
+  });
 
   const dotRef = useRef(null);
   const ringRef = useRef(null);
@@ -13,11 +16,7 @@ export default function CustomCursor() {
   const rafId = useRef(null);
 
   useEffect(() => {
-    // Check if device has fine pointer (mouse), not touch
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    if (isTouch) return;
-
-    setIsVisible(true);
+    if (!isVisible) return;
 
     const onMouseMove = (e) => {
       mousePos.current.x = e.clientX;
@@ -69,7 +68,7 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', handleMouseOver);
       if (rafId.current) cancelAnimationFrame(rafId.current);
     };
-  }, []);
+  }, [isVisible]);
 
   if (!isVisible) return null;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Calendar, MapPin, BookOpen, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, BookOpen, CheckCircle2 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Education() {

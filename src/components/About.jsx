@@ -4,10 +4,7 @@ import {
   Award,
   Briefcase,
   FolderGit2,
-  Cpu,
-  CheckCircle2,
-  Terminal,
-  UserCheck
+  CheckCircle2
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 

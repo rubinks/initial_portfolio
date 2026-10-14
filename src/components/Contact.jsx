@@ -6,7 +6,6 @@ import {
   CheckCircle,
   Copy,
   Check,
-  Sparkles,
   ArrowUpRight
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';

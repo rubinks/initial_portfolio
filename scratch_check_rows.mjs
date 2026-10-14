@@ -3,7 +3,7 @@ import jpeg from 'jpeg-js';
 
 const jpegData = fs.readFileSync('public/assets/rubinraj_original.jpg');
 const rawData = jpeg.decode(jpegData, { useTArray: true });
-const { width, height, data } = rawData;
+const { width, height: _height, data } = rawData;
 
 function checkRow(y) {
   let leftBg = 0;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, Sparkles, Image, Check } from 'lucide-react';
+import { Menu, X, Download, Image } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar({ portraitMode, setPortraitMode }) {

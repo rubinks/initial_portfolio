@@ -16,8 +16,7 @@ import {
   Monitor,
   GitBranch,
   Users2,
-  Zap,
-  Sparkles
+  Zap
 } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 

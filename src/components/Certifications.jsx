@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, CheckCircle, ShieldCheck, Calendar, ExternalLink, Sparkles } from 'lucide-react';
+import { Award, CheckCircle, ShieldCheck, Calendar } from 'lucide-react';
 import { certifications } from '../data/portfolioData';
 
 export default function Certifications() {

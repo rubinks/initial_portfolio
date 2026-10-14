@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, ExternalLink, Sparkles, Layers, Cpu } from 'lucide-react';
+import { X, CheckCircle2, Sparkles, Layers, Cpu } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function ProjectModal({ project, onClose }) {
