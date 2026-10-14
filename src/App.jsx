@@ -13,7 +13,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [portraitMode, setPortraitMode] = useState('cinematic'); // 'cinematic' or 'natural'
+  const [portraitMode, setPortraitMode] = useState('studio'); // 'studio' (default studio color) or 'cinematic'
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (

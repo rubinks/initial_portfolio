@@ -543,6 +543,40 @@ button {
   gap: 14px;
 }
 
+.navbar-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(0, 119, 255, 0.28) 0%, rgba(0, 240, 255, 0.16) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 16px rgba(0, 119, 255, 0.22);
+  text-decoration: none;
+}
+
+.navbar-resume-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 119, 255, 0.45) 0%, rgba(0, 240, 255, 0.32) 100%);
+  border-color: var(--electric-cyan);
+  box-shadow: 0 0 22px rgba(0, 240, 255, 0.45);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.navbar-resume-btn svg {
+  color: var(--electric-cyan);
+  transition: transform var(--transition-fast);
+}
+
+.navbar-resume-btn:hover svg {
+  transform: translateY(1px);
+}
+
 .portrait-toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -861,8 +895,26 @@ button {
 }
 
 .hero-btn {
-  padding: 14px 32px;
-  font-size: 0.94rem;
+  padding: 13px 26px;
+  font-size: 0.9rem;
+}
+
+.hero-resume-action {
+  background: rgba(0, 119, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #ffffff;
+  gap: 8px;
+}
+
+.hero-resume-action:hover {
+  background: rgba(0, 119, 255, 0.25);
+  border-color: var(--electric-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.hero-resume-action svg {
+  color: var(--electric-cyan);
 }
 
 /* Slide Indicator / Arrow Controls */
@@ -973,6 +1025,11 @@ button {
   z-index: 2;
   filter: drop-shadow(0 0 35px rgba(0, 119, 255, 0.25));
   transition: filter var(--transition-smooth);
+}
+
+.hero-portrait-image.studio,
+.hero-portrait-image.natural {
+  filter: drop-shadow(0 0 35px rgba(0, 119, 255, 0.28));
 }
 
 .hero-portrait-image.cinematic {

@@ -7,7 +7,7 @@ import {
   Sparkles,
   Code2,
   Terminal,
-  ExternalLink
+  Download
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
@@ -149,6 +149,18 @@ export default function Hero({ portraitMode, setPortraitMode }) {
             >
               <GithubIcon size={18} />
             </a>
+            <a
+              href={personalInfo.resumeUrl}
+              download="Rubinraj_K_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-btn hero-resume-icon-btn"
+              title="Download Resume (PDF)"
+              aria-label="Download Resume"
+              data-cursor-text="RESUME"
+            >
+              <Download size={18} />
+            </a>
           </div>
 
           {/* Small Professional Label */}
@@ -172,7 +184,7 @@ export default function Hero({ portraitMode, setPortraitMode }) {
           {/* Short Introduction */}
           <p className="hero-description">{slidesData[currentSlide - 1].highlight}</p>
 
-          {/* Two CTA Buttons */}
+          {/* Three CTA Buttons */}
           <div className="hero-actions-row">
             <a
               href="#projects"
@@ -181,6 +193,19 @@ export default function Hero({ portraitMode, setPortraitMode }) {
             >
               <span>VIEW MY WORK</span>
               <ArrowRight size={17} />
+            </a>
+
+            <a
+              href={personalInfo.resumeUrl}
+              download="Rubinraj_K_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline hero-btn hero-resume-action"
+              data-cursor-text="RESUME"
+              title="Download Rubinraj's Resume"
+            >
+              <Download size={16} />
+              <span>DOWNLOAD RESUME</span>
             </a>
 
             <a
@@ -267,7 +292,7 @@ export default function Hero({ portraitMode, setPortraitMode }) {
             <button
               onClick={() =>
                 setPortraitMode((prev) =>
-                  prev === 'cinematic' ? 'natural' : 'cinematic'
+                  prev === 'cinematic' ? 'studio' : 'cinematic'
                 )
               }
               className="portrait-style-pill"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Download, Sparkles, Image, Check } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar({ portraitMode, setPortraitMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -92,18 +93,33 @@ export default function Navbar({ portraitMode, setPortraitMode }) {
 
           {/* Right Action Controls */}
           <div className="navbar-actions">
+            {/* Download Resume Button on Top Header */}
+            <a
+              href={personalInfo.resumeUrl}
+              download="Rubinraj_K_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar-resume-btn"
+              title="Download Rubinraj's Resume (PDF)"
+              aria-label="Download Resume"
+              data-cursor-text="RESUME"
+            >
+              <Download size={14} />
+              <span>Resume</span>
+            </a>
+
             {/* Quick Portrait Filter Toggle */}
             <button
-              onClick={() => setPortraitMode(prev => prev === 'cinematic' ? 'natural' : 'cinematic')}
+              onClick={() => setPortraitMode(prev => prev === 'studio' ? 'cinematic' : 'studio')}
               className="portrait-toggle-btn"
-              title="Toggle Portrait Style (Cinematic / Natural)"
+              title="Toggle Portrait Style (Studio Color / Cinematic B&W)"
               aria-label="Toggle Portrait Style"
             >
               <Image size={15} />
-              <span className="toggle-label">{portraitMode === 'cinematic' ? 'Cinematic' : 'Natural'}</span>
+              <span className="toggle-label">{portraitMode === 'studio' ? 'Studio Color' : 'Cinematic'}</span>
             </button>
 
-            {/* Resume Button */}
+            {/* Connect Button */}
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
@@ -158,16 +174,29 @@ export default function Navbar({ portraitMode, setPortraitMode }) {
           </div>
 
           <div className="mobile-drawer-footer">
+            <a
+              href={personalInfo.resumeUrl}
+              download="Rubinraj_K_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline mobile-resume-btn"
+              style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+            >
+              <Download size={16} />
+              <span>Download Resume (PDF)</span>
+            </a>
+
             <button
               onClick={() => {
-                setPortraitMode(prev => prev === 'cinematic' ? 'natural' : 'cinematic');
+                setPortraitMode(prev => prev === 'studio' ? 'cinematic' : 'studio');
                 setMobileMenuOpen(false);
               }}
               className="mobile-toggle-style-btn"
             >
               <Image size={16} />
-              <span>Portrait Style: {portraitMode === 'cinematic' ? 'Cinematic B&W' : 'Natural Cutout'}</span>
+              <span>Portrait Style: {portraitMode === 'studio' ? 'Studio Color' : 'Cinematic B&W'}</span>
             </button>
+
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}

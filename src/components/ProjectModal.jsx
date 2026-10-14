@@ -81,7 +81,7 @@ export default function ProjectModal({ project, onClose }) {
               data-cursor-text="CODE"
             >
               <GithubIcon size={16} />
-              <span>Source Repository Placeholder</span>
+              <span>View GitHub Repository</span>
             </a>
             <button
               onClick={onClose}

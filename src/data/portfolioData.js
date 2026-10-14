@@ -26,10 +26,11 @@ export const personalInfo = {
   contact: {
     email: "rubinrajkumar26@gmail.com",
     phone: "+91 9150683882",
-    linkedin: "https://linkedin.com/in/LINKEDIN_URL",
-    github: "https://github.com/GITHUB_URL",
+    linkedin: "https://www.linkedin.com/in/rubinraj-k-a1b4ba387/",
+    github: "https://github.com/rubinks",
     location: "Tamil Nadu, India"
   },
+  resumeUrl: "/Rubinraj_K_Resume.pdf",
   stats: [
     { label: "B.E. CSE", value: "2023–2027", sub: "Undergraduate" },
     { label: "Academic CGPA", value: "7.8/10", sub: "Consistent Performance" },
@@ -92,7 +93,7 @@ export const projects = [
       "RESTful APIs & database query optimization"
     ],
     links: {
-      github: "https://github.com/GITHUB_URL/inventory-management-system",
+      github: "https://github.com/rubinks/inventory_system-main",
       demo: "PROJECT_DEMO_URL"
     },
     metrics: [
@@ -122,7 +123,7 @@ export const projects = [
       "Clean, modern responsive React interface"
     ],
     links: {
-      github: "https://github.com/GITHUB_URL/url-shortener",
+      github: "https://github.com/rubinks/url-shortener",
       demo: "PROJECT_DEMO_URL"
     },
     metrics: [
